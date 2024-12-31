@@ -138,8 +138,9 @@ static safety_config carbage_init(uint16_t param) {
 
   static const CanMsg CARBAGE_TX_MSGS[] = {
     {0x2E4, 0, 8},  // STEERING_LKA
-    {0x200, 0, 3},  // STEERING_SERVO
-    {0x201, 0, 3},  // STEERING_BRAKE
+    {0x200, 0, 3},  // SERVO_CONTROL
+    {0x201, 0, 3},  // BRAKE_CONTROL
+    {0x202, 0, 3},  // OTHER_CONTROL
   };
 
   static RxCheck carbage_rx_checks[] = {
