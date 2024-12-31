@@ -145,7 +145,7 @@ static safety_config carbage_init(uint16_t param) {
   static RxCheck carbage_rx_checks[] = {
     {.msg = {{0x260, 0, 8, .frequency = 50U}, { 0 }, { 0 }}},  // DI_torque1
     {.msg = {{0x100, 0, 8, .frequency = 10U}, { 0 }, { 0 }}},  // CBP_status
-    {.msg = {{0x38F, 0, 8, .frequency = 50U}, { 0 }, { 0 }}},  // IBST_private2
+    {.msg = {{0x38F, 2, 8, .frequency = 50U}, { 0 }, { 0 }}},  // IBST_private2
   };
 
   safety_config ret = BUILD_SAFETY_CFG(carbage_rx_checks, CARBAGE_TX_MSGS);
